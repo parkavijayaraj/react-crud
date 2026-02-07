@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "firstName": "parkavi",
+      "lastName": "jayaraj",
+      "phone": "9025677609",
+      "email": "parkavij08@gmail.com",
+      "id": 1
+    },
+    {
+      "firstName": "nandhini",
+      "lastName": "jayaraj",
+      "phone": "9025677609",
+      "email": "nandhini@gmail.com",
+      "id": 2
+    },
+    {
+      "firstName": "sundar",
+      "lastName": "jayaraj",
+      "phone": "9046374647",
+      "email": "sundar@gmail.com",
+      "id": 3
+    }
+  ]
+}
