@@ -1,73 +1,64 @@
-# React + TypeScript + Vite
+https://userdetailmanagement.netlify.app/
+http://localhost:3001/users
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🔧 Setup Instructions
 
-Currently, two official plugins are available:
+### 1️⃣ Clone the repository
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+git clone <your-github-repo-url>
+cd <project-folder>
+npm run dev
 
-## React Compiler
+# Run JSON server
+npx json-server --watch db.json --port 3001
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+# React User Management (CRUD) Application
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This project is a simple React-based CRUD (Create, Read, Update, Delete) web application for managing user data.  
+It is built with **extensibility** in mind, allowing new form fields to be added with minimal code changes using a **schema-driven approach**.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Create, Read, Update, Delete users
+- Schema-based dynamic form rendering
+- Input validation (required fields, patterns, length checks)
+- Clean and user-friendly UI
+- Mock REST API using JSON Server
+- TypeScript for type safety
+- Easily extensible architecture
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+http://localhost:3001/users
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🧱 Tech Stack
+
+- **React**
+- **TypeScript**
+- **Vite**
+- **Axios**
+- **JSON Server** (mock API)
+- **Plain CSS** (responsive & clean UI)
+
+---
+
+## 📋 User Fields
+
+The application currently supports the following fields:
+
+- First Name (required, minimum length validation)
+- Last Name (required)
+- Phone Number (required, exactly 10 digits)
+- Email Address (required, valid email format)
+
+
+
+
+
+
+
+
