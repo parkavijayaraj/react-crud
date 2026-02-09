@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3001/users";
+const API_URL = "https://user-crud-app-vyt7.onrender.com/users";
 
 export const getUsers = () => axios.get(API_URL);
 export const createUser = (data: any) => axios.post(API_URL, data);
